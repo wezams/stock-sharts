@@ -7,7 +7,7 @@ import {data} from './values.js'
 dotenv.config({ path: './secrets/AlphaApi.env' });
 const secretKey = process.env.SECRET_KEY;
 
-console.log(data["Time Series (Daily)"]["2025-03-28"]);
+console.log(data["Time Series (Daily)"]["2025-03-28"]["2. high"]);
 
 /*
 axios.get('https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=' + company + '&apikey=' + secretKey)
