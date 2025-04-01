@@ -1,14 +1,15 @@
-import {data} from './values.js'
 const ctx = document.getElementById('testChart');
+      export function createChart(data){
+        console.log(data.dataset1)
         new Chart(ctx, {
           type: 'line',
           data: {
-            labels: ['24', '25', '26', '27', '28'],
+            labels: [data.x1, data.x2, data.x3, data.x4, data.x5],
             datasets: [{
               label: 'Stock',
-              data: [data["Time Series (Daily)"]["2025-03-24"]["2. high"], data["Time Series (Daily)"]["2025-03-25"]["2. high"], data["Time Series (Daily)"]["2025-03-26"]["2. high"], data["Time Series (Daily)"]["2025-03-27"]["2. high"], data["Time Series (Daily)"]["2025-03-28"]["2. high"]],
+              data: [data.y1, data.y2, data.y3, data.y4, data.y5],
               borderWidth: 1,
-              borderColor: 'rgb(0, 255, 38)',  // Line color (solid blue)
+              borderColor: 'rgb(0, 255, 38)',
               backgroundColor: 'rgb(0, 255, 38)',
             }]
           },
@@ -20,3 +21,4 @@ const ctx = document.getElementById('testChart');
             }
           }
         });
+      }
