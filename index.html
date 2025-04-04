@@ -8,11 +8,13 @@
 </head>
 <body>
     <div>
-        <canvas id="testChart"></canvas>
-      </div>
+        <canvas id="testChart" ondrop="dropHandler(event)" ondragover="dragoverHandler(event)"></canvas>
+    </div>
+    <div id="draggable" draggable="true" ondragstart="dragstartHandler(event)" width="336" height="69" data-stock="BYDDY">BYDDY</div>
       
       <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
       
       <script type="module" src="/javascript/test.js"></script>
+      <script src="/javascript/drag.js"></script>
 </body>
 </html>
