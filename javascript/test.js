@@ -6,16 +6,16 @@ import { setChart1 } from './values.js';
 
 const company = "BYDDY";
 const bby = {
-  "x1": "1",
-  "x2": "2",
-  "x3": "3",
-  "x4": "4",
-  "x5": "5",
-  "y1": "1337",
-  "y2": "6969",
-  "y3": "69",
-  "y4": "1234",
-  "y5": "5555",
+  "x1": "2025-03-28",
+  "x2": "2025-03-27",
+  "x3": "2025-03-26",
+  "x4": "2025-03-25",
+  "x5": "2025-03-24",
+  "y1": data["Time Series (Daily)"]["2025-03-28"]["2. high"],
+  "y2": data["Time Series (Daily)"]["2025-03-27"]["2. high"],
+  "y3": data["Time Series (Daily)"]["2025-03-26"]["2. high"],
+  "y4": data["Time Series (Daily)"]["2025-03-25"]["2. high"],
+  "y5": data["Time Series (Daily)"]["2025-03-24"]["2. high"],
 
 }
 setChart1(bby)
