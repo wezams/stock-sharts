@@ -1,6 +1,5 @@
 const ctx = document.getElementById('testChart');
       export function createChart(data){
-        console.log(data.dataset1)
         new Chart(ctx, {
           type: 'line',
           data: {

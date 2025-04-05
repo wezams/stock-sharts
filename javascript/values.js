@@ -2,7 +2,6 @@ let chart1 = null;
 
 export function setChart1(chart){
   chart1 = chart;
-  console.log(chart1.dataset1)
 }
 
 export const data = {
