@@ -58,6 +58,6 @@ window.addEventListener('devicemotion', function(event) {
   const z = event.acceleration.z;
   const shakeThreshold = 15;
   if (Math.abs(x) + Math.abs(y) + Math.abs(z) > shakeThreshold) {
-    this.navigator.vibrate(1);
+    this.navigator.vibrate(100);
   }
 });
