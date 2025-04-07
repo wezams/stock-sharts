@@ -16,6 +16,17 @@ function dropHandler(ev) {
 }
 
 document.addEventListener("DOMContentLoaded", function(){
+  
+  window.addEventListener('devicemotion', function(event) {
+    const x = event.acceleration.x;
+    const y = event.acceleration.y;
+    const z = event.acceleration.z;
+    const shakeThreshold = 15;
+    if (Math.abs(x) + Math.abs(y) + Math.abs(z) > shakeThreshold) {
+      this.navigator.vibrate(100);
+    }
+  });
+
   drag_wrapper = document.getElementById('stock-drag-wrapper');
   click_wrapper = document.getElementById('stock-click-wrapper')
   button = document.getElementById('stock-button');
@@ -49,15 +60,5 @@ window.addEventListener('resize', function() {
   }
   else{
     click_wrapper.style.display = "none";
-  }
-});
-
-window.addEventListener('devicemotion', function(event) {
-  const x = event.acceleration.x;
-  const y = event.acceleration.y;
-  const z = event.acceleration.z;
-  const shakeThreshold = 15;
-  if (Math.abs(x) + Math.abs(y) + Math.abs(z) > shakeThreshold) {
-    this.navigator.vibrate(100);
   }
 });
