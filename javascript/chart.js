@@ -1,6 +1,20 @@
 const ctx = document.getElementById('testChart');
-      export function createChart(data){
-        new Chart(ctx, {
+let chart1 = undefined;
+let displayNumbers = false;
+
+      export function updateChart(numbers){
+        if (displayNumbers != numbers){
+        displayNumbers = numbers;
+        chart1.options.scales.y.ticks.display = displayNumbers;
+        chart1.options.scales.x.ticks.display = displayNumbers;
+        chart1.update();
+        }
+      }
+
+      export function createChart(data, numbers){
+        displayNumbers = numbers;
+        console.log(displayNumbers)
+        chart1 = new Chart(ctx, {
           type: 'line',
           data: {
             labels: [data.x1, data.x2, data.x3, data.x4, data.x5],
@@ -19,8 +33,24 @@ const ctx = document.getElementById('testChart');
               }
             },
             scales: {
+              x: {
+                ticks: {
+                  display: displayNumbers,
+                  color: 'white',
+                  font: {
+                    size: 16
+                  },
+                },
+              },
               y: {
-                beginAtZero: false
+                beginAtZero: false,
+                ticks: {
+                  display: displayNumbers,
+                  color: 'white',
+                  font: {
+                    size: 16
+                  },
+                },
               }
             }
           }

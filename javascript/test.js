@@ -1,8 +1,11 @@
 //import dotenv from 'dotenv';
 //import axios from 'axios';
 import {data} from './values.js'
-import { createChart } from './chart.js';
+import { createChart, updateChart } from './chart.js';
 import { setChart1 } from './values.js';
+const ctx = document.getElementById('testChart');
+const computedStyle = window.getComputedStyle(ctx);
+
 
 const company = "BYDDY";
 const bby = {
@@ -19,13 +22,27 @@ const bby = {
 
 }
 setChart1(bby)
-createChart(bby)
+if (window.innerWidth <= 600) { 
+  createChart(bby, false)
+}
+else{
+  createChart(bby, true)
+}
+
+//gör så att diagramet har en 2.1 aspect ratio och så att numrerna blir mindre när man minskar fönstret
+
+window.addEventListener('resize', function() {
+  if (window.innerWidth <= 600) { 
+    ctx.style.height = parseInt(computedStyle.width) / 2 + "px";
+    updateChart(false);
+  }
+  else{
+    updateChart(true);
+  }
+});
 
 //dotenv.config({ path: './secrets/AlphaApi.env' });
 //const secretKey = process.env.SECRET_KEY;
-
-console.log(data["Time Series (Daily)"]["2025-03-28"]["2. high"]);
-
 
 /*axios.get('https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=' + company + '&apikey=' + secretKey)
   .then(response => {
