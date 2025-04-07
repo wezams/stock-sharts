@@ -16,7 +16,7 @@ function dropHandler(ev) {
 }
 
 document.addEventListener("DOMContentLoaded", function(){
-  
+
   drag_wrapper = document.getElementById('stock-drag-wrapper');
   click_wrapper = document.getElementById('stock-click-wrapper')
   button = document.getElementById('stock-button');
@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function(){
   drag_wrapper.style.display = "none";
   click_wrapper.style.display = "none";
   button.addEventListener("click", function(){
+    
     navigator.vibrate(200);
     if (window.innerWidth >= 600) { 
       if (drag_wrapper.style.display == "none"){

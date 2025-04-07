@@ -20,7 +20,7 @@ function startListeningToDeviceMotion() {
 
         const shakeThreshold = 15;
         if (Math.abs(x) + Math.abs(y) + Math.abs(z) > shakeThreshold) {
-            alert('Shake detected!');
+            navigator.vibrate(2);
         }
     });
 }
