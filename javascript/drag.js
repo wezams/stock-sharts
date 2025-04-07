@@ -23,22 +23,23 @@ document.addEventListener("DOMContentLoaded", function(){
   drag_wrapper.style.display = "none";
   click_wrapper.style.display = "none";
   button.addEventListener("click", function(){
-  if (window.innerWidth >= 600) { 
-    if (drag_wrapper.style.display == "none"){
-      drag_wrapper.style.display = "flex";
+    navigator.vibrate(200);
+    if (window.innerWidth >= 600) { 
+      if (drag_wrapper.style.display == "none"){
+        drag_wrapper.style.display = "flex";
+      }
+      else {
+        drag_wrapper.style.display = "none";
+      }
     }
-    else {
-      drag_wrapper.style.display = "none";
+    else{
+      if (click_wrapper.style.display == "none"){
+        click_wrapper.style.display = "flex";
+      }
+      else {
+        click_wrapper.style.display = "none";
+      }
     }
-  }
-  else{
-    if (click_wrapper.style.display == "none"){
-      click_wrapper.style.display = "flex";
-    }
-    else {
-      click_wrapper.style.display = "none";
-    }
-  }
   });
 });
 
