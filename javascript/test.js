@@ -1,7 +1,7 @@
 //import dotenv from 'dotenv';
 //import axios from 'axios';
 import {data} from './values.js'
-import { createChart, updateChart } from './chart.js';
+import { createChart, updateChartNumbersSize, updateChartNumbersVisibilty } from './chart.js';
 import { setChart1 } from './values.js';
 const ctx = document.getElementById('testChart');
 const computedStyle = window.getComputedStyle(ctx);
@@ -23,21 +23,19 @@ const bby = {
 }
 setChart1(bby)
 if (window.innerWidth <= 600) { 
-  createChart(bby, false)
+  createChart(bby, true, parseInt(computedStyle.width) / 37.5)
 }
 else{
-  createChart(bby, true)
+  createChart(bby, true, 16)
 }
-
-//gör så att diagramet har en 2.1 aspect ratio och så att numrerna blir mindre när man minskar fönstret
 
 window.addEventListener('resize', function() {
   if (window.innerWidth <= 600) { 
     ctx.style.height = parseInt(computedStyle.width) / 2 + "px";
-    updateChart(false);
+    updateChartNumbersSize(parseInt(computedStyle.width) / 37.5);
   }
   else{
-    updateChart(true);
+    updateChartNumbersVisibilty(16);
   }
 });
 

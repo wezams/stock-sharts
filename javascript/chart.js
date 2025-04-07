@@ -1,8 +1,18 @@
 const ctx = document.getElementById('testChart');
 let chart1 = undefined;
 let displayNumbers = false;
+let numbersSize = 16;
 
-      export function updateChart(numbers){
+      export function updateChartNumbersSize(size){
+        if (numbersSize != size){
+          numbersSize = size;
+          chart1.options.scales.x.ticks.font.size = numbersSize;
+          chart1.options.scales.y.ticks.font.size = numbersSize;
+          chart1.update();
+        }
+      }
+
+      export function updateChartNumbersVisibilty(numbers){
         if (displayNumbers != numbers){
         displayNumbers = numbers;
         chart1.options.scales.y.ticks.display = displayNumbers;
@@ -11,9 +21,10 @@ let displayNumbers = false;
         }
       }
 
-      export function createChart(data, numbers){
+      export function createChart(data, numbers, size){
         displayNumbers = numbers;
-        console.log(displayNumbers)
+        numbersSize = size;
+        console.log(numbersSize)
         chart1 = new Chart(ctx, {
           type: 'line',
           data: {
@@ -38,7 +49,7 @@ let displayNumbers = false;
                   display: displayNumbers,
                   color: 'white',
                   font: {
-                    size: 16
+                    size: numbersSize
                   },
                 },
               },
@@ -48,7 +59,7 @@ let displayNumbers = false;
                   display: displayNumbers,
                   color: 'white',
                   font: {
-                    size: 16
+                    size: numbersSize
                   },
                 },
               }

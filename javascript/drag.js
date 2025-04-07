@@ -1,5 +1,6 @@
 let button = undefined;
-let wrapper = undefined;
+let drag_wrapper = undefined;
+let click_wrapper = undefined;
 let stock = undefined;
 
 function dragstartHandler(ev) {
@@ -15,16 +16,37 @@ function dropHandler(ev) {
 }
 
 document.addEventListener("DOMContentLoaded", function(){
-  wrapper = document.getElementById('stock-wrapper');
+  drag_wrapper = document.getElementById('stock-drag-wrapper');
+  click_wrapper = document.getElementById('stock-click-wrapper')
   button = document.getElementById('stock-button');
   stock = document.getElementById('stock-name');
-  wrapper.style.display = "none";
+  drag_wrapper.style.display = "none";
+  click_wrapper.style.display = "none";
   button.addEventListener("click", function(){
-    if (wrapper.style.display == "none"){
-      wrapper.style.display = "flex";
+  if (window.innerWidth >= 600) { 
+    if (drag_wrapper.style.display == "none"){
+      drag_wrapper.style.display = "flex";
     }
     else {
-      wrapper.style.display = "none";
+      drag_wrapper.style.display = "none";
     }
+  }
+  else{
+    if (click_wrapper.style.display == "none"){
+      click_wrapper.style.display = "flex";
+    }
+    else {
+      click_wrapper.style.display = "none";
+    }
+  }
   });
+});
+
+window.addEventListener('resize', function() {
+  if (window.innerWidth <= 600) {
+    drag_wrapper.style.display = "none";
+  }
+  else{
+    click_wrapper.style.display = "none";
+  }
 });

@@ -1,3 +1,6 @@
+button{
+    all: unset;
+}
 body{
     background-color: black;
 }
@@ -26,8 +29,9 @@ body{
     font-size: 20px;
     text-align: center;
     color: greenyellow;
+    cursor: pointer;
 }
-#stock-wrapper{
+.stock-wrapper{
     margin-top: 40px;
     padding: 10px;
     background-color: grey;
@@ -37,7 +41,7 @@ body{
     gap: 10px;
     border-radius: 20px;
 }
-.draggable{
+.stock-wrapper > *{
     background-color: black;
     width: 80px;
     height: 24px;
