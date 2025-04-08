@@ -18,7 +18,7 @@ function startListeningToDeviceMotion() {
 
         console.log(`X: ${x}, Y: ${y}, Z: ${z}`);
 
-        const shakeThreshold = 15;
+        const shakeThreshold = 50;
         if (Math.abs(x) + Math.abs(y) + Math.abs(z) > shakeThreshold) {
             navigator.vibrate(50);
         }
