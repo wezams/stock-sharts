@@ -1,14 +1,9 @@
-//import dotenv from 'dotenv';
-//import axios from 'axios';
 import {data} from './values.js'
 import { createChart, updateChartNumbersSize, updateChartNumbersVisibilty } from './chart.js';
 import { setChart1 } from './values.js';
 const ctx = document.getElementById('testChart');
 const computedStyle = window.getComputedStyle(ctx);
 
-
-const company = "BYDDY";
-console.log(formatDate(new Date()));
 const bby = {
   "x1": "2025-03-28",
   "x2": "2025-03-27",
@@ -39,22 +34,3 @@ window.addEventListener('resize', function() {
     updateChartNumbersVisibilty(16);
   }
 });
-
-function formatDate(date) {
-  let year = date.getFullYear();
-  let month = String(date.getMonth() + 1).padStart(2, '0'); // Months are zero-indexed, so we add 1
-  let day = String(date.getDate()).padStart(2, '0');
-
-  return `${year}-${month}-${day}`;
-}
-
-//dotenv.config({ path: './secrets/AlphaApi.env' });
-//const secretKey = process.env.SECRET_KEY;
-
-/*axios.get('https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=' + company + '&apikey=' + secretKey)
-  .then(response => {
-    console.log(response.data["Time Series (Daily)"]["2025-03-28"]);
-  })
-  .catch(error => {
-    console.error('There was an error with the request:', error);
-  });*/
