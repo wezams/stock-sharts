@@ -1,8 +1,12 @@
 import {data} from './values.js'
 import { createChart, updateChartNumbersSize, updateChartNumbersVisibilty } from './chart.js';
 import { setChart1 } from './values.js';
-const ctx = document.getElementById('testChart');
+let ctx = document.getElementById('testChart');
 const computedStyle = window.getComputedStyle(ctx);
+
+export function changeChart(){
+  ctx = document.getElementById('testChart');
+}
 
 const bby = {
   "x1": "2025-03-28",
@@ -15,7 +19,6 @@ const bby = {
   "y3": data["Time Series (Daily)"]["2025-03-26"]["2. high"],
   "y4": data["Time Series (Daily)"]["2025-03-25"]["2. high"],
   "y5": data["Time Series (Daily)"]["2025-03-24"]["2. high"],
-
 }
 setChart1(bby)
 if (window.innerWidth <= 600) { 

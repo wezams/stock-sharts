@@ -1,7 +1,13 @@
-const ctx = document.getElementById('testChart');
+import { updateChartElement } from "./functions";
+let ctx = document.getElementById('testChart');
+const chartParent = document.getElementById('canvas-holder');
 let chart1 = undefined;
 let displayNumbers = false;
 let numbersSize = 16;
+
+      export function changeShart(){
+        ctx = document.getElementById('testChart');
+      }
 
       export function updateChartNumbersSize(size){
         if (numbersSize != size){
@@ -19,6 +25,16 @@ let numbersSize = 16;
         chart1.options.scales.x.ticks.display = displayNumbers;
         chart1.update();
         }
+      }
+
+      export function clearChart(){
+        chartParent.removeChild(chart1);
+        ctx = document.createElement('canvas');
+        ctx.id = "testChart";
+        ctx.ondrop = "dropHandler(event)";
+        ctx.ondragover = "dragoverHandler(event)";
+        chartParent.appendChild(ctx);
+        updateChartElement();
       }
 
       export function createChart(data, numbers, size){
