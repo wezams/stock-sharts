@@ -1,3 +1,4 @@
+console.log(document.currentScript) + "pp";
 import { clearChart } from "./chart";
 import { createChart } from "./chart";
 
