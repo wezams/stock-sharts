@@ -1,7 +1,9 @@
 console.log(document.currentScript) + "pp";
-import { clearChart } from "./chart";
-import { createChart } from "./chart";
+import { clearChart } from "./chart.js";
+import { createChart } from "./chart.js";
+import {data} from './values.js'
 
+let chart = undefined;
 let button = undefined;
 let drag_wrapper = undefined;
 let click_wrapper = undefined;
@@ -46,20 +48,21 @@ const PLBY = {
 function dragstartHandler(ev) {
   ev.dataTransfer.setData("stock-token", ev.target.dataset.stock);
 } 
-function dragoverHandler(ev) {
+export function dragoverHandler(ev) {
   ev.preventDefault();
 }
-function dropHandler(ev) {
+export function dropHandler(ev) {
   ev.preventDefault();
   const data = ev.dataTransfer.getData("stock-token");
   clearChart();
-  if(data == "BYDDY"){
+  console.log(data)
+  if(data == "Build Your Dream"){
     createChart(BYDDY, true, 16);
   }
-  if(data == "GME"){
+  if(data == "Gamestop"){
     createChart(GME, true, 16);
   }
-  if(data == "PLBY"){
+  if(data == "Playboy"){
     createChart(PLBY, true, 16);
   }
   stock.innerText = data;
@@ -67,12 +70,21 @@ function dropHandler(ev) {
 
 document.addEventListener("DOMContentLoaded", function(){
 
+  chart = document.getElementById('testChart');
   drag_wrapper = document.getElementById('stock-drag-wrapper');
-  click_wrapper = document.getElementById('stock-click-wrapper')
+  click_wrapper = document.getElementById('stock-click-wrapper');
   button = document.getElementById('stock-button');
   stock = document.getElementById('stock-name');
   drag_wrapper.style.display = "none";
   click_wrapper.style.display = "none";
+
+  chart.ondrop=dropHandler;
+  chart.ondragover=dragoverHandler;
+
+  for (let drag of drag_wrapper.children){
+    drag.ondragstart= dragstartHandler;
+  }
+
   button.addEventListener("click", function(){
     navigator.vibrate(50);
     if (window.innerWidth >= 600) { 

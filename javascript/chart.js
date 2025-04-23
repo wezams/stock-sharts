@@ -1,6 +1,10 @@
-import { updateChartElement } from "./functions";
+import { updateChartElement } from "./functions.js";
+import { dropHandler } from "./drag.js";
+import { dragoverHandler } from "./drag.js";
+
 let ctx = document.getElementById('testChart');
 const chartParent = document.getElementById('canvas-holder');
+let chart = document.getElementById('testChart');
 let chart1 = undefined;
 let displayNumbers = false;
 let numbersSize = 16;
@@ -28,12 +32,12 @@ let numbersSize = 16;
       }
 
       export function clearChart(){
-        chartParent.removeChild(chart1);
-        ctx = document.createElement('canvas');
-        ctx.id = "testChart";
-        ctx.ondrop = "dropHandler(event)";
-        ctx.ondragover = "dragoverHandler(event)";
-        chartParent.appendChild(ctx);
+        chartParent.removeChild(chart);
+        chart = document.createElement('canvas');
+        chart.id = "testChart";
+        chart.ondrop = dropHandler;
+        chart.ondragover = dragoverHandler;
+        chartParent.appendChild(chart);
         updateChartElement();
       }
 

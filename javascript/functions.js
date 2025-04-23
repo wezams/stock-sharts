@@ -1,5 +1,5 @@
-import { changeChart } from "./test";
-import { changeShart } from "./chart";
+import { changeChart } from "./test.js";
+import { changeShart } from "./chart.js";
 export function updateChartElement(){
     changeChart();
     changeShart();

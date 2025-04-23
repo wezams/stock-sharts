@@ -1,23 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="javascript/drag.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/stocks.css">
 </head>
 <body>
-    <script type="module" src="javascript/drag.js"></script>
     <h1 id="stock-name">pp</h1>
     <div id="canvas-holder" style="width: 100%;">
-        <canvas id="testChart" ondrop="dropHandler(event)" ondragover="dragoverHandler(event)"></canvas>
+        <canvas id="testChart"></canvas>
     </div>
     <button id="stock-button">stocks</button>
     <div id="stock-drag-wrapper" class="stock-wrapper">
-        <div style="cursor: grab;" draggable="true" ondragstart="dragstartHandler(event)" data-stockToken="BYDDY" data-stock="Build Your Dream">BYDDY</div>
-        <div style="cursor: grab;" draggable="true" ondragstart="dragstartHandler(event)" data-stockToken="GME" data-stock="Gamestop">GME</div>
-        <div style="cursor: grab;" draggable="true" ondragstart="dragstartHandler(event)" data-stockToken="PLBY" data-stock="Playboy">PLBY</div>
+        <div style="cursor: grab;" draggable="true" data-stockToken="BYDDY" data-stock="Build Your Dream">BYDDY</div>
+        <div style="cursor: grab;" draggable="true" data-stockToken="GME" data-stock="Gamestop">GME</div>
+        <div style="cursor: grab;" draggable="true" data-stockToken="PLBY" data-stock="Playboy">PLBY</div>
     </div>
     <div id="stock-click-wrapper" class="stock-wrapper">
         <button style="cursor: pointer;" data-stockToken="BYDDY" data-stock="Build Your Dream">BYDDY</button>
@@ -27,5 +25,6 @@
       <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
       
       <script type="module" src="javascript/test.js"></script>
+      <script type="module" src="javascript/drag.js"></script>
 </body>
 </html>
