@@ -2,19 +2,19 @@ button{
     all: unset;
 }
 body{
-    background-color: black;
+    background-color: rgb(226, 213, 188);
 }
 p{
-    color: aliceblue;
+    color: black;
 }
 a{
-    color: aliceblue;
+    color: black;
     transition: transform 0.3s ease;
     display: inline-block;
 }
 a:hover{
     transform: scale(1.1);
-    color: greenyellow;
+    color: green;
     cursor: pointer;
 }
 a:active{
@@ -49,6 +49,7 @@ a:active{
     cursor: pointer;
 }
 .stock-wrapper{
+    position: absolute;
     margin-top: 40px;
     padding: 10px;
     background-color: grey;
@@ -68,6 +69,12 @@ a:active{
     font-size: 20px;
     text-align: center;
     color: greenyellow;
+}
+#stock-drag-wrapper > div{
+    cursor: grab;
+}
+#stock-click-wrapper > button{
+    cursor: pointer;
 }
 @media only screen and (max-width: 600px) {
     #testChart{
