@@ -4,6 +4,23 @@ button{
 body{
     background-color: black;
 }
+p{
+    color: aliceblue;
+}
+a{
+    color: aliceblue;
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+a:hover{
+    transform: scale(1.1);
+    color: greenyellow;
+    cursor: pointer;
+}
+a:active{
+    transition: transform 0.1s ease;
+    transform: scale(0.9);
+}
 #stock-name{
     color: white;
 }
