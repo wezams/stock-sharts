@@ -9,13 +9,12 @@ p{
     color: black;
 }
 a{
-    color: black;
     transition: transform 0.3s ease;
+    color: blue;
     display: inline-block;
 }
 a:hover{
     transform: scale(1.1);
-    color: green;
     cursor: pointer;
 }
 a:active{
@@ -71,9 +70,13 @@ a:active{
     background-size: contain;
     background-position-y: center;
 }
+#stock-wrapper-wrapper{
+    display: flex;
+    justify-content: center;
+}
 .stock-wrapper{
     position: absolute;
-    margin-top: 40px;
+    margin-top: 10px;
     padding: 10px;
     background-color: grey;
     display: none;
@@ -87,6 +90,15 @@ a:active{
 }
 #stock-click-wrapper > button{
     cursor: pointer;
+}
+table{
+    background-color: aliceblue;
+    border-spacing: 0;
+    width: 600px;
+    height: 400px;
+}
+th, td{
+    outline: 1px black solid;
 }
 @media only screen and (max-width: 600px) {
     #testChart{

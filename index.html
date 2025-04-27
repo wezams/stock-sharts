@@ -21,17 +21,41 @@
         <button id="stock-button" class="button-preset"></button>
         <data value="to-be-set" class="button-preset" id="weekly-high">156</data>
     </div>
-    <div id="stock-drag-wrapper" class="stock-wrapper">
-        <div draggable="true" data-stockToken="BYDDY" data-stock="Build Your Dream">BYDDY</div>
-        <div draggable="true" data-stockToken="GME" data-stock="Gamestop">GME</div>
-        <div draggable="true" data-stockToken="PLBY" data-stock="Playboy">PLBY</div>
-    </div>
-    <div id="stock-click-wrapper" class="stock-wrapper">
-        <button data-stockToken="BYDDY" data-stock="Build Your Dream">BYDDY</button>
-        <button data-stockToken="GME" data-stock="Gamestop">GME</button>
-        <button data-stockToken="PLBY" data-stock="Playboy">PLBY</button>
+    <div id="stock-wrapper-wrapper">
+        <div id="stock-drag-wrapper" class="stock-wrapper">
+            <div draggable="true" data-stockToken="BYDDY" data-stock="Build Your Dream">BYDDY</div>
+            <div draggable="true" data-stockToken="GME" data-stock="Gamestop">GME</div>
+            <div draggable="true" data-stockToken="PLBY" data-stock="Playboy">PLBY</div>
+        </div>
+        <div id="stock-click-wrapper" class="stock-wrapper">
+            <button data-stockToken="BYDDY" data-stock="Build Your Dream">BYDDY</button>
+            <button data-stockToken="GME" data-stock="Gamestop">GME</button>
+            <button data-stockToken="PLBY" data-stock="Playboy">PLBY</button>
+        </div>
     </div>
     <img id="breakup-image" src="images/temp.jpg" alt="change later" width="100%">
+    <table>
+        <thead>
+            <tr>
+                <th>Stock</th>
+                <th>Stock price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>BYD (Build Your Dreams)</td>
+                <td id="BYD-tablePrice" style="color: red;">6969</td>
+            </tr>
+            <tr>
+                <td>GME (Gamestop)</td>
+                <td id="GME-tablePrice" style="color: greenyellow;">420</td>
+            </tr>
+            <tr>
+                <td>PLBY (Playboy)</td>
+                <td id="PLBY-tablePrice" style="color: red;">1337</td>
+            </tr>
+        </tbody>
+    </table>
 
     <p>hej, detta är text, <a>detta är en länk</a>, och detta är text</p>
 
