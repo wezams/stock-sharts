@@ -9,11 +9,18 @@
 <body>
     <div id="top-of-website">
         <h1 id="stock-name">pp</h1>
-        <div id="canvas-holder" style="width: 100%;">
+        <div id="canvas-holder">
             <canvas id="testChart"></canvas>
         </div>
     </div>
-    <button id="stock-button">stocks</button>
+    <div id="grid-wrapper">
+        <label for="daily-high">daily high</label>
+        <label for="stock-button">stocks</label>
+        <label for="weekly-high">weekly high</label>
+        <data value="to-be-set" class="button-preset" id="daily-high">72</data>
+        <button id="stock-button" class="button-preset"></button>
+        <data value="to-be-set" class="button-preset" id="weekly-high">156</data>
+    </div>
     <div id="stock-drag-wrapper" class="stock-wrapper">
         <div draggable="true" data-stockToken="BYDDY" data-stock="Build Your Dream">BYDDY</div>
         <div draggable="true" data-stockToken="GME" data-stock="Gamestop">GME</div>
@@ -24,6 +31,7 @@
         <button data-stockToken="GME" data-stock="Gamestop">GME</button>
         <button data-stockToken="PLBY" data-stock="Playboy">PLBY</button>
     </div>
+    <img id="breakup-image" src="images/temp.jpg" alt="change later" width="100%">
 
     <p>hej, detta är text, <a>detta är en länk</a>, och detta är text</p>
 

@@ -3,6 +3,7 @@ button{
 }
 body{
     background-color: rgb(226, 213, 188);
+    margin: 0;
 }
 p{
     color: black;
@@ -23,6 +24,12 @@ a:active{
 }
 #stock-name{
     color: white;
+    text-align: center;
+}
+#canvas-holder{
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 #testChart{
     background-color: rgb(0, 0, 0);
@@ -36,17 +43,33 @@ a:active{
     max-height: 300px;
     min-height: 300px;
 }
-#stock-button{
-    margin-top: 40px;
+#grid-wrapper{
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    padding: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 3fr;
+}
+.button-preset, .stock-wrapper > *{
     background-color: black;
     width: 80px;
+    height: 24px;
     border-radius: 20px;
     outline: 2px greenyellow dashed;
     padding: 10px;
     font-size: 20px;
     text-align: center;
-    color: greenyellow;
+    color: greenyellow
+}
+#stock-button{
     cursor: pointer;
+    background-image: url("../images/arrow.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-y: center;
 }
 .stock-wrapper{
     position: absolute;
@@ -58,17 +81,6 @@ a:active{
     flex-direction: column;
     gap: 10px;
     border-radius: 20px;
-}
-.stock-wrapper > *{
-    background-color: black;
-    width: 80px;
-    height: 24px;
-    border-radius: 20px;
-    outline: 2px greenyellow dashed;
-    padding: 10px;
-    font-size: 20px;
-    text-align: center;
-    color: greenyellow;
 }
 #stock-drag-wrapper > div{
     cursor: grab;
