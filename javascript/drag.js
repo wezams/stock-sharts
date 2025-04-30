@@ -56,14 +56,14 @@ export function dropHandler(ev) {
   const data = ev.dataTransfer.getData("stock-token");
   clearChart();
   console.log(data)
-  if(data == "Build Your Dream"){
-    createChart(BYDDY, true, 16);
+  if(data == "Build Your Dreams"){
+    createChart(BYDDY, true, 20);
   }
   if(data == "Gamestop"){
-    createChart(GME, true, 16);
+    createChart(GME, true, 20);
   }
   if(data == "Playboy"){
-    createChart(PLBY, true, 16);
+    createChart(PLBY, true, 20);
   }
   stock.innerText = data;
 }

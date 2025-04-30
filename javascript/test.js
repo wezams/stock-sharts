@@ -21,17 +21,17 @@ const bby = {
   "y5": data["Time Series (Daily)"]["2025-03-24"]["2. high"],
 }
 setChart1(bby)
-if (window.innerWidth <= 600) { 
-  createChart(bby, true, parseInt(computedStyle.width) / 37.5)
+if (window.innerWidth <= 800) { 
+  createChart(bby, true, parseInt(computedStyle.width) / 40)
 }
 else{
-  createChart(bby, true, 16)
+  createChart(bby, true, 20)
 }
 
 window.addEventListener('resize', function() {
-  if (window.innerWidth <= 600) { 
+  if (window.innerWidth <= 800) { 
     ctx.style.height = parseInt(computedStyle.width) / 2 + "px";
-    updateChartNumbersSize(parseInt(computedStyle.width) / 37.5);
+    updateChartNumbersSize(parseInt(computedStyle.width) / 40);
   }
   else{
     updateChartNumbersVisibilty(16);

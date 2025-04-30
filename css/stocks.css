@@ -1,9 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Hammersmith+One&display=swap');
+
 button{
     all: unset;
 }
 body{
-    background-color: rgb(226, 213, 188);
+    background-color: black;
     margin: 0;
+    font-family: "Fira Code", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
 p{
     color: black;
@@ -22,8 +27,9 @@ a:active{
     transform: scale(0.9);
 }
 #stock-name{
-    color: white;
+    color: greenyellow;
     text-align: center;
+    margin-top: 50px;
 }
 #canvas-holder{
     width: 100%;
@@ -37,10 +43,10 @@ a:active{
     outline: 2px greenyellow dashed;
     border-radius: 20px;
 
-    max-width: 600px;
-    min-width: 600px;
-    max-height: 300px;
-    min-height: 300px;
+    max-width: 800px;
+    min-width: 800px;
+    max-height: 400px;
+    min-height: 400px;
 }
 #grid-wrapper{
     display: grid;
@@ -92,15 +98,16 @@ a:active{
     cursor: pointer;
 }
 table{
-    background-color: aliceblue;
+    background-color: black;
+    color: white;
     border-spacing: 0;
     width: 600px;
-    height: 400px;
+    height: 200px;
 }
 th, td{
-    outline: 1px black solid;
+    outline: 1px greenyellow dotted;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
     #testChart{
         max-width: 100%;
         min-width: 100%;
