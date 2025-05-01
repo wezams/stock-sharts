@@ -78,7 +78,7 @@ a:active{
 }
 .stock-wrapper{
     position: absolute;
-    margin-top: 10px;
+    margin-top: -10px;
     padding: 10px;
     background-color: grey;
     display: none;
@@ -93,10 +93,13 @@ a:active{
 #stock-click-wrapper > button{
     cursor: pointer;
 }
+#breakup-image{
+    display: none;
+}
 #table-wrapper{
     display: flex;
     justify-content: center;
-
+    margin-top: 180px;
 }
 table{
     background-color: black;
@@ -114,17 +117,26 @@ th, td{
 th{
     font-weight: 900;
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 842px) {
     #testChart{
-        max-width: 100%;
-        min-width: 100%;
+        max-width: 95%;
+        min-width: 95%;
         max-height: unset;
         min-height: unset;
     }
 }
 @media only screen and (max-width: 500px) {
+    /*500px är större än min mobil, så det är nog stort nog för alla mobil telefoner*/
+    .stock-wrapper{
+        margin-top: 20px;
+    }
+    #breakup-image{
+        display: inline;
+    }
+    #table-wrapper{
+        margin-top: 0;
+    }
     th, td{
         font-size: 15px;
-        color: aqua;
     }
 }
