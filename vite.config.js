@@ -1,5 +1,5 @@
-export default {
-    server: {
-      port: 6969,
-    },
-  };
+import { defineConfig } from 'vite'
+
+export default defineConfig({
+  base: '/stock-sharts/',
+})
