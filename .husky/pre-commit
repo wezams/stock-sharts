@@ -3,5 +3,4 @@
 
 echo "hii"
 
-npx lint-staged || exit 1
-npm test
+npm run precommit
