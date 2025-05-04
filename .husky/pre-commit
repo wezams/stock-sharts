@@ -1,3 +1,10 @@
 #!/bin/sh
 echo "husky is working"
-npm run precommit
+
+STAGED=$(git diff --cached --name-only)
+
+if [ -z "$STAGED" ]; then
+  echo "No staged files. Skipping lint-staged."
+else
+  npm run precommit
+fi
