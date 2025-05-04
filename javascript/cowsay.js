@@ -1,12 +1,12 @@
-import cowsay from "cowsay";
+import { say } from 'cowsay';
 
-let  x   =1
-
-export function HejDanne(){
-    console.clear;
-    console.log(cowsay.say({
-        text: "Hej danne!",
-        e: "^^"
-    }))
+export function HejDanne() {
+  console.clear;
+  console.log(
+    say({
+      text: 'Hej danne!',
+      e: '^^',
+    }),
+  );
 }
 HejDanne();
