@@ -1,5 +1,7 @@
 import flatpickr from "flatpickr";
 import "flatpickr/dist/flatpickr.min.css";
+import { HejDanne } from "./cowsay";
+
 let quoteBox = null;
 let calendar = null;
 let dates = null;
@@ -28,4 +30,5 @@ document.addEventListener("DOMContentLoaded", () => {
         maxDate: dates[dates.length - 1],
         theme: "light",    
     });
+    HejDanne();
 });
