@@ -1,1 +1,3 @@
+node javascript/cowsay.js
+npx lint-staged || exit 1
 npm test
