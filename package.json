@@ -10,12 +10,13 @@
     "preview": "vite preview",
     "deploy": "vite build && gh-pages -d dist",
     "prepare": "husky",
-    "test": "echo \"no test yet, add jest l8tr\" && exit 0"
+    "test": "echo \"no test yet, add jest l8tr\" && exit 0",
+    "precommit": "lint-staged && npm test"
   },
   "lint-staged": {
     "*.{js,ts,jsx,tsx}": [
       "eslint --fix",
-      "prettier --writÄ"
+      "prettier --write"
     ]
   },
   "repository": {
