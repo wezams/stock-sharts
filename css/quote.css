@@ -53,5 +53,18 @@ form{
         width: 25px;
         padding: 2.5px;
     }
+    label{
+        font-size: 12vw;
+        margin-top: 0.67em;
+        margin-bottom: 0.67em;
+    }
+    #quote{
+        border-radius: 2vw;
+        font-size: 6vw;
+        padding: 2vw;
+    }
+    #calendar{
+        font-size: 4vw;
+        width: 20vw;
+    }
 }
-/* gör ett npm commando som bygger vite, och pushar till github */
