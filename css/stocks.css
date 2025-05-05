@@ -75,6 +75,7 @@ a:active{
 #stock-wrapper-wrapper{
     display: flex;
     justify-content: center;
+    z-index: 2;
 }
 .stock-wrapper{
     position: absolute;

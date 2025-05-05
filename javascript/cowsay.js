@@ -1,10 +1,10 @@
 import { say } from 'cowsay';
 
-export function HejDanne() {
+export function cowsays(Text) {
   console.clear;
   console.log(
     say({
-      text: 'Hej danne!',
+      text: Text,
       e: '^^',
     }),
   );

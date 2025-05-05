@@ -1,6 +1,7 @@
 import { updateChartElement } from "./functions.js";
 import { dropHandler } from "./drag.js";
 import { dragoverHandler } from "./drag.js";
+import { cowsays } from "./cowsay.js";
 
 let ctx = document.getElementById('testChart');
 const chartParent = document.getElementById('canvas-holder');
@@ -24,10 +25,11 @@ let numbersSize = 16;
 
       export function updateChartNumbersVisibilty(numbers){
         if (displayNumbers != numbers){
-        displayNumbers = numbers;
-        chart1.options.scales.y.ticks.display = displayNumbers;
-        chart1.options.scales.x.ticks.display = displayNumbers;
-        chart1.update();
+          cowsays(numbers + " is now set")
+          displayNumbers = numbers;
+          chart1.options.scales.y.ticks.display = displayNumbers;
+          chart1.options.scales.x.ticks.display = displayNumbers;
+          chart1.update();
         }
       }
 
