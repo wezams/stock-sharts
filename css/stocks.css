@@ -93,6 +93,19 @@ a:active{
 #stock-click-wrapper > button{
     cursor: pointer;
 }
+#image-wrapper{
+    display: flex;
+}
+#image-overlay{
+    display: flex;
+    background: linear-gradient(black, #00000000, black);
+    z-index: 1;
+    width: 100%;
+    position: absolute;
+}
+#Invisible-image{
+    opacity: 0;
+}
 #breakup-image{
     display: none;
 }
