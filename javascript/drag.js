@@ -57,13 +57,13 @@ export function dropHandler(ev) {
   clearChart();
   console.log(data)
   if(data == "Build Your Dreams"){
-    createChart(BYDDY, true, 20);
+    createChart(BYDDY, true, NaN);
   }
   if(data == "Gamestop"){
-    createChart(GME, true, 20);
+    createChart(GME, true, NaN);
   }
   if(data == "Playboy"){
-    createChart(PLBY, true, 20);
+    createChart(PLBY, true, NaN);
   }
   stock.innerText = data;
 }

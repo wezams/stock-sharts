@@ -2,7 +2,6 @@ import { updateChartElement } from "./functions.js";
 import { dropHandler } from "./drag.js";
 import { dragoverHandler } from "./drag.js";
 import { cowsays } from "./cowsay.js";
-import { changeChart } from "./test.js";
 
 let ctx = document.getElementById('testChart');
 const chartParent = document.getElementById('canvas-holder');
@@ -42,13 +41,14 @@ let numbersSize = 20;
         chart.ondrop = dropHandler;
         chart.ondragover = dragoverHandler;
         chartParent.appendChild(chart);
-        changeChart();
         updateChartElement();
       }
 
       export function createChart(data, numbers, size){
         displayNumbers = numbers;
-        numbersSize = size;
+        if (size + "" != "NaN"){
+          numbersSize = size;
+        }
         console.log(numbersSize)
         chart1 = new Chart(ctx, {
           type: 'line',
