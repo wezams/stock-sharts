@@ -13,4 +13,4 @@
                 ||     ||
 EOC
 `;function P(e){const n={e:e.eyes||"oo",T:e.tongue||"  ",n:e.wrap,W:e.wrapLength||40,text:e.text||"",_:e.text||[],f:e.cow};return e.mode&&(n[e.mode]=!0),n}function j(e,n){const r=e.f||L,t=O(e);return t.thoughts="\\",A["say"](e.text||e._.join(" "),e.n?null:e.W)+`
-`+C(r,t)}function N(e){return j(P(e))}function R(e){console.log(N({text:e}))}export{R as c};
+`+C(r,t)}function N(e){return j(P(e))}function R(e){console.clear(),console.log(N({text:e}))}export{R as c};
