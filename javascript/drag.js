@@ -53,6 +53,10 @@ export function dragoverHandler(ev) {
 }
 export function dropHandler(ev) {
   ev.preventDefault();
+  event_Handler(ev);
+}
+
+function event_Handler(ev){
   const data = ev.dataTransfer.getData("stock-token");
   clearChart();
   console.log(data)
@@ -83,6 +87,9 @@ document.addEventListener("DOMContentLoaded", function(){
 
   for (let drag of drag_wrapper.children){
     drag.ondragstart= dragstartHandler;
+  }
+  for (let click of click_wrapper.children){
+    click.addEventListener("click", function(ev){event_Handler(ev);});
   }
 
   button.addEventListener("click", function(){
