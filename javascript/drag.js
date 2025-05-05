@@ -56,21 +56,31 @@ export function dropHandler(ev) {
   event_Handler(ev);
 }
 
-function event_Handler(ev){
-  const data = ev.dataTransfer.getData("stock-token");
+function event_Handler(ev) {
+  let data;
+  if (ev.dataTransfer) {
+    data = ev.dataTransfer.getData("stock-token");
+  } 
+  else{
+    data = ev.target.dataset.stock;
+  } 
+
   clearChart();
-  console.log(data)
-  if(data == "Build Your Dreams"){
+  console.log(data);
+
+  if (data === "Build Your Dreams") {
     createChart(BYDDY, true, NaN);
   }
-  if(data == "Gamestop"){
+  if (data === "Gamestop") {
     createChart(GME, true, NaN);
   }
-  if(data == "Playboy"){
+  if (data === "Playboy") {
     createChart(PLBY, true, NaN);
   }
+
   stock.innerText = data;
 }
+
 
 document.addEventListener("DOMContentLoaded", function(){
 
