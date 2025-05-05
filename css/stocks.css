@@ -147,7 +147,7 @@ th{
         display: inline;
     }
     #table-wrapper{
-        margin-top: 0;
+        margin-top: 20px;
     }
     th, td{
         font-size: 15px;
