@@ -2,13 +2,14 @@ import { updateChartElement } from "./functions.js";
 import { dropHandler } from "./drag.js";
 import { dragoverHandler } from "./drag.js";
 import { cowsays } from "./cowsay.js";
+import { changeChart } from "./test.js";
 
 let ctx = document.getElementById('testChart');
 const chartParent = document.getElementById('canvas-holder');
 let chart = document.getElementById('testChart');
 let chart1 = undefined;
 let displayNumbers = false;
-let numbersSize = 16;
+let numbersSize = 20;
 
       export function changeShart(){
         ctx = document.getElementById('testChart');
@@ -16,6 +17,7 @@ let numbersSize = 16;
 
       export function updateChartNumbersSize(size){
         if (numbersSize != size){
+          cowsays(numbersSize + " is now number size")
           numbersSize = size;
           chart1.options.scales.x.ticks.font.size = numbersSize;
           chart1.options.scales.y.ticks.font.size = numbersSize;
@@ -25,7 +27,7 @@ let numbersSize = 16;
 
       export function updateChartNumbersVisibilty(numbers){
         if (displayNumbers != numbers){
-          cowsays(numbers + " is now set")
+          cowsays(numbers + " is now set");
           displayNumbers = numbers;
           chart1.options.scales.y.ticks.display = displayNumbers;
           chart1.options.scales.x.ticks.display = displayNumbers;
@@ -40,6 +42,7 @@ let numbersSize = 16;
         chart.ondrop = dropHandler;
         chart.ondragover = dragoverHandler;
         chartParent.appendChild(chart);
+        changeChart();
         updateChartElement();
       }
 

@@ -1,7 +1,7 @@
 import { say } from 'cowsay';
 
 export function cowsays(Text) {
-  console.clear;
+  console.clear();
   console.log(
     say({
       text: Text,

@@ -1,11 +1,14 @@
 import {data} from './values.js'
 import { createChart, updateChartNumbersSize, updateChartNumbersVisibilty } from './chart.js';
 import { setChart1 } from './values.js';
+import { cowsays } from './cowsay.js';
 let ctx = document.getElementById('testChart');
-const computedStyle = window.getComputedStyle(ctx);
+let computedStyle = window.getComputedStyle(ctx);
 
 export function changeChart(){
   ctx = document.getElementById('testChart');
+  computedStyle = window.getComputedStyle(ctx);
+  cowsays("test chart changed");
 }
 
 const bby = {
@@ -34,6 +37,6 @@ window.addEventListener('resize', function() {
     updateChartNumbersSize(parseInt(computedStyle.width) / 40);
   }
   else{
-    updateChartNumbersVisibilty(16);
+    updateChartNumbersSize(20);
   }
 });
