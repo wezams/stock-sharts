@@ -10,7 +10,8 @@ let quotes = {
     "2025-03-27": "penis is the hotdog of a man",
     "2025-03-28": "You gay sonova bitch",
     "2025-03-29": "I have the 69th of ace",
-    "2025-03-30": "If you have luck, she will suck"
+    "2025-03-30": "If you have luck, she will suck",
+    "2025-03-31": "I may be dumb, but at least i'm not Martin"
 };
 
 document.addEventListener("DOMContentLoaded", () => {

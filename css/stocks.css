@@ -13,7 +13,7 @@ body{
     overflow-x: hidden;
 }
 header{
-    font-size: 5vw;
+    font-size: 30px;
     display: flex;
     align-items: center;
 }
@@ -125,7 +125,7 @@ th{
 footer{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    margin-top: 30px;
+    margin-top: 80px;
 }
 .nav-holder{
     outline: 2px greenyellow dotted;
@@ -136,7 +136,7 @@ a{
     color: blue;
     display: inline-block;
     text-align: center;
-    font-size: 120%;
+    font-size: 20px;
     width: 100%;
 }
 a:hover{
@@ -157,6 +157,9 @@ a:active{
 }
 @media only screen and (max-width: 500px) {
     /*500px är större än min mobil, så det är nog stort nog för alla mobil telefoner*/
+    header{
+        font-size: 15px;
+    }
     .stock-wrapper{
         margin-top: 20px;
     }
@@ -167,6 +170,9 @@ a:active{
         margin-top: 20px;
     }
     th, td{
+        font-size: 15px;
+    }
+    a{
         font-size: 15px;
     }
 }
