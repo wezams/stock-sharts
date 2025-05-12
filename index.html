@@ -1,17 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
+    <link rel="preload" href="css/critical.css" as="style" onload="this.rel='stylesheet'">
+    <link rel="preload" href="images/css_sprites.png" as="image" type="image/png">
+    <link rel="preload" href="images/cool-gif.webm" as="video">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="BBC Finance, short for Big Boys Club, is on a mission to make stock trading more accessible to everyone. Founded by a singularly passionate developer, August Andersson the 17th, BBC Finance builds clean, simple tools that cut through the noise and empower everyday people to understand and participate in the stock market. We believe trading shouldn’t require a finance degree or hours of research. That’s why our tools are designed to be straightforward, intuitive, and actually helpful, so you can focus on making smart moves, not learning jargon. At BBC Finance, it’s not about being flashy—it’s about being effective. Welcome to the club.">
     <meta name="keywords" content="HTML, CSS, JavaScript">
     <title>BBC Finance</title>
+    <link rel="icon" type="image/x-icon" href="images/logo.png">
+    <noscript><link rel="stylesheet" href="css/critical.css"></noscript>
     <link rel="stylesheet" href="css/stocks.css">
-    <link rel="preload" href="images/css_sprites.png" as="image">
-    <link rel="preload" href="images/cool-gif.webm" as="video">
 </head>
 <body>
-    <header><span class="bg-logo"></span> BBC Finance</header>
+    <header><h1><span id="bg-logo"></span> BBC Finance</h1></header>
 
     <div id="top-of-website">
         <h1 id="stock-name">pp</h1>
@@ -23,9 +26,9 @@
         <p>daily high</p>
         <label for="stock-button">stocks</label>
         <p>weekly high</p>
-        <data value="to-be-set" class="button-preset" id="daily-high">72</data>
-        <button id="stock-button" class="button-preset"></button>
-        <data value="to-be-set" class="button-preset" id="weekly-high">156</data>
+        <div class="button-preset" id="daily-high">72</div>
+        <button id="stock-button" class="button-preset" name="stock-button"></button>
+        <div class="button-preset" id="weekly-high">156</div>
     </div>
     <div id="stock-wrapper-wrapper">
         <div id="stock-drag-wrapper" class="stock-wrapper">
@@ -41,11 +44,11 @@
     </div>
     <div id="image-wrapper">
         <div id="image-overlay">
-            <video id="Invisible-image" src="images/cool-gif.webm" alt="Invisible image" width="100%"></video>
+            <video id="Invisible-image" src="images/cool-gif.webm" width="100%" title="Invisible image">Video failed to load</video>
         </div>
-        <video id="breakup-image" width="100%" autoplay loop muted>
+        <video id="breakup-image" width="100%" autoplay loop muted title="breakup image">
             <source src="images/cool-gif.webm" type="video/webm">
-            Cool video of code flowing down
+            Video failed to load
         </video>
     </div>
 
@@ -82,8 +85,8 @@
 
       <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
       
-      <script type="module" src="/javascript/test.js"></script>
-      <script type="module" src="/javascript/drag.js"></script>
+      <script type="module" src="javascript/test.js"></script>
+      <script type="module" src="javascript/drag.js"></script>
       <script type="module" src="javascript/table.js"></script>
 </body>
 </html>
