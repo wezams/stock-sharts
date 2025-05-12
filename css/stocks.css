@@ -67,10 +67,10 @@ header{
 }
 #stock-button{
     cursor: pointer;
-    background-image: url("../images/arrow.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position-y: center;
+    width: 80px; 
+    height: 24px;
+    background-size: 200px 100px;
+    background: url('../images/css_sprites.png') -100px 0px;
 }
 #stock-wrapper-wrapper{
     display: flex;
