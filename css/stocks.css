@@ -17,6 +17,12 @@ header{
     display: flex;
     align-items: center;
 }
+.bg-logo {
+    display: inline-block;
+    width: 80px; height: 80px;
+    background-size: 200px 100px;
+    background: url('../images/css_sprites.png') -10px -10px;
+}
 #stock-name{
     color: greenyellow;
     text-align: center;
@@ -159,6 +165,10 @@ a:active{
     /*500px är större än min mobil, så det är nog stort nog för alla mobil telefoner*/
     header{
         font-size: 15px;
+    }
+    .bg-logo {
+        width: 40px; height: 40px;
+        background-size: 100px 50px;
     }
     .stock-wrapper{
         margin-top: 20px;

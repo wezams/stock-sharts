@@ -1,4 +1,3 @@
-console.log(document.currentScript) + "pp";
 import { clearChart } from "./chart.js";
 import { createChart } from "./chart.js";
 import {data} from './values.js'
@@ -77,7 +76,6 @@ function event_Handler(ev) {
   if (data === "Playboy") {
     createChart(PLBY, true, NaN);
   }
-
   stock.innerText = data;
 }
 
@@ -99,11 +97,24 @@ document.addEventListener("DOMContentLoaded", function(){
     drag.ondragstart= dragstartHandler;
   }
   for (let click of click_wrapper.children){
-    click.addEventListener("click", function(ev){event_Handler(ev);});
+    click.addEventListener("click", function(ev){
+      try{
+        navigator.vibrate(50);
+      }
+      catch{
+        console.log("browser does not support vibrate")
+      }
+      event_Handler(ev);
+    });
   }
 
   button.addEventListener("click", function(){
-    navigator.vibrate(50);
+    try{
+      navigator.vibrate(50);
+    }
+    catch{
+      console.log("browser does not support vibrate")
+    }
     if (window.innerWidth >= 600) { 
       if (drag_wrapper.style.display == "none"){
         drag_wrapper.style.display = "flex";

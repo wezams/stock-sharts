@@ -4,13 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/contact-us.css">
 </head>
 <body>
-    <style>
-        label{margin-top: 20px;}
-        textarea{margin-top: 20px; height: 200px;}
-    </style>
-    <form method="post" style="display: flex; justify-content: center; flex-direction: column;">
+    <h1>Contact Us</h1>
+    <form method="post">
         <label for="Nmae">Enter Name</label>
         <input type="text" placeholder="Name" name="Name">
         <label for="E-mail">Enter E-mail</label>
@@ -209,8 +207,9 @@
               <option value="Tonga">Tonga</option>
               <option value="Vanuatu">Vanuatu</option>
             </optgroup>
-          </select>          
+        </select>
         <textarea name="concern" id="concern" placeholder="Concern"></textarea>
+        <input type="button" value="Submit" name="Submit" id="submit-button">
     </form>
 </body>
 </html>
