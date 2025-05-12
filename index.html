@@ -7,6 +7,8 @@
     <meta name="keywords" content="HTML, CSS, JavaScript">
     <title>BBC Finance</title>
     <link rel="stylesheet" href="css/stocks.css">
+    <link rel="preload" href="images/css_sprites.png" as="image">
+    <link rel="preload" href="images/cool-gif.webm" as="video">
 </head>
 <body>
     <header><span class="bg-logo"></span> BBC Finance</header>
@@ -39,9 +41,12 @@
     </div>
     <div id="image-wrapper">
         <div id="image-overlay">
-            <img id="Invisible-image" src="images/cool-gif.webm" alt="Invisible image" width="100%">
+            <video id="Invisible-image" src="images/cool-gif.webm" alt="Invisible image" width="100%"></video>
         </div>
-        <img id="breakup-image" src="images/cool-gif.webm" alt="Code flowing down" width="100%">
+        <video id="breakup-image" width="100%" autoplay loop muted>
+            <source src="images/cool-gif.webm" type="video/webm">
+            Cool video of code flowing down
+        </video>
     </div>
 
     <div id="table-wrapper">
