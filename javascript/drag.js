@@ -1,3 +1,5 @@
+//Modifierad kod tagen från w3school
+
 import { clearChart } from "./chart.js";
 import { createChart } from "./chart.js";
 import {data} from './values.js'
