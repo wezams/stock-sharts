@@ -4,6 +4,7 @@ import { dragoverHandler } from "./drag.js";
 import { cowsays } from "./cowsay.js";
 
 let ctx = document.getElementById('testChart');
+ctx.style.display = "block";
 const chartParent = document.getElementById('canvas-holder');
 let chart = document.getElementById('testChart');
 let chart1 = undefined;

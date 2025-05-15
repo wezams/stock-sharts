@@ -43,6 +43,7 @@ form{
     color: inherit;
     font-size: 2vw;
     width: 10vw;
+    display: none;
 }
 #calendar:hover{
     cursor: pointer;

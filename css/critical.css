@@ -46,7 +46,6 @@ header > h1{
     min-height: 400px;
 }
 #grid-wrapper{
-    display: grid;
     justify-items: center;
     align-items: center;
     padding: 20px;
@@ -70,4 +69,25 @@ header > h1{
     height: 24px;
     background-size: 200px 100px;
     background: url('../images/css_sprites.png') -100px 0px;
+}
+@media only screen and (max-width: 842px) {
+    #testChart{
+        max-width: 95%;
+        min-width: 95%;
+        max-height: unset;
+        min-height: unset;
+    }
+}
+@media only screen and (max-width: 500px) {
+    /*500px är större än min mobil, så det är nog stort nog för alla mobil telefoner*/
+    header > h1{
+        font-size: 15px;
+    }
+    #bg-logo {
+        width: 40px; height: 40px;
+        background-size: 100px 50px;
+    }
+    .stock-wrapper{
+        margin-top: 20px;
+    }
 }

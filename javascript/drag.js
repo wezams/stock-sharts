@@ -84,6 +84,8 @@ function event_Handler(ev) {
 
 document.addEventListener("DOMContentLoaded", function(){
 
+  document.getElementById('header').style.display = "block";
+  document.getElementById('grid-wrapper').style.display = "grid";
   chart = document.getElementById('testChart');
   drag_wrapper = document.getElementById('stock-drag-wrapper');
   click_wrapper = document.getElementById('stock-click-wrapper');

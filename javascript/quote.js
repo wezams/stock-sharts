@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const temp = dates[dates.length - 1];
     quoteBox = document.getElementById('quote');
     calendar = document.getElementById('calendar');
+    calendar.style.display = "block";
     calendar.value = temp;
     quoteBox.innerText = quotes[temp];
     calendar.addEventListener('input', function() {
