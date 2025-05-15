@@ -1,5 +1,5 @@
 import {data} from './values.js'
-import { createChart, updateChartNumbersSize, updateChartNumbersVisibilty } from './chart.js';
+import { createChart, updateChartNumbersSize, updateChartNumbersVisibilty } from './shart.js';
 import { setChart1 } from './values.js';
 import { cowsays } from './cowsay.js';
 let ctx = document.getElementById('testChart');

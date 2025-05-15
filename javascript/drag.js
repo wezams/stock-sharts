@@ -1,7 +1,7 @@
 //Modifierad kod tagen från w3school
 
-import { clearChart } from "./chart.js";
-import { createChart } from "./chart.js";
+import { clearChart } from "./shart.js";
+import { createChart } from "./shart.js";
 import {data} from './values.js'
 
 let chart = undefined;
@@ -84,8 +84,6 @@ function event_Handler(ev) {
 
 document.addEventListener("DOMContentLoaded", function(){
 
-  document.getElementById('header').style.display = "block";
-  document.getElementById('grid-wrapper').style.display = "grid";
   chart = document.getElementById('testChart');
   drag_wrapper = document.getElementById('stock-drag-wrapper');
   click_wrapper = document.getElementById('stock-click-wrapper');

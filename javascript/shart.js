@@ -2,9 +2,34 @@ import { updateChartElement } from "./functions.js";
 import { dropHandler } from "./drag.js";
 import { dragoverHandler } from "./drag.js";
 import { cowsays } from "./cowsay.js";
+import { Chart } from "chart.js";
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend,
+  LineController,
+  LineElement
+} from 'chart.js';
+
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend,
+  LineController,
+  LineElement
+);
+
 
 let ctx = document.getElementById('testChart');
-ctx.style.display = "block";
 const chartParent = document.getElementById('canvas-holder');
 let chart = document.getElementById('testChart');
 let chart1 = undefined;

@@ -1,5 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Hammersmith+One&display=swap');
-
+@font-face {
+    font-family: 'Fira Code', monospace;
+    src: url('../fonts/FiraCode-VariableFont_wght.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+  
 button{
     all: unset;
 }
@@ -46,6 +51,7 @@ header > h1{
     min-height: 400px;
 }
 #grid-wrapper{
+    display: grid;
     justify-items: center;
     align-items: center;
     padding: 20px;

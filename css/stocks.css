@@ -1,5 +1,6 @@
 noscript{
     position: fixed;
+    height: 100%;
     top: 0;
     background-color: red;
     color: black;
@@ -9,17 +10,10 @@ noscript{
     font-weight: 900;
     z-index: 3;
 }
-header{
-    display: none;
-}
-#stock-name{
-    display: none;
-}
-#testChart{
-    display: none;
-}
-#grid-wrapper{
-    display: none;
+#noscriptFooter{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 #stock-button{
     cursor: pointer;
@@ -91,7 +85,7 @@ footer{
 }
 a{
     transition: transform 0.3s ease;
-    color: blue;
+    color: aqua;
     display: inline-block;
     text-align: center;
     font-size: 20px;
